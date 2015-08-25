@@ -43,7 +43,7 @@ class System_OnKill : public PlayerScript
 			if (KillStreakData[KillerGUID].killstreak % 10 == 0) // send killstreak message every 10 kills
 				{
 				std::ostringstream ss;
-				ss << "|cFF81CF42" << Killer->GetName() << "|r Has A Killstreak Of |cFF42A0CF" << KillStreakData[KillerGUID].killstreak << "|r!";
+				ss << "|cFF81CF42" << Killer->GetName() << "|r Has A Killstreak Of |cFF42A0CF" << KillStreakData[KillerGUID].killstreak << " |r!";
 				sWorld->SendServerMessage(SERVER_MSG_STRING, ss.str().c_str());
 				}
 			else if (KillStreakData[KillerGUID].killstreak == 3)
